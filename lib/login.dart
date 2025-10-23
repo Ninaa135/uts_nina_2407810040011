@@ -8,6 +8,7 @@ class login extends StatefulWidget {
 }
 
 class _loginState extends State<login> {
+  final TextEditingController _emailcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,8 +26,39 @@ class _loginState extends State<login> {
                 fontSize: 50, fontWeight: FontWeight.bold, color: Colors.blueAccent
               ),
               ),
-              Text("Sign In", style: TextStyle(fontSize: 30, fontWeight: FontWeight.normal,),),
-              Text("Enter your ID and password to sign in!", style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal, color: Colors.grey),)
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 5,
+                  children: [
+                    Text("Sign In", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,),),
+                  Text("Enter your ID and password to sign in!", style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal, color: Colors.grey),),
+                  ],
+                ),
+                ),
+
+              Padding(padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                spacing: 5,
+                children: [
+                  Text("Email"),
+                  TextField(
+                    controller: _emailcontroller,
+                    decoration: InputDecoration(
+                      hintText: "email",
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8)
+                      )
+                    ),
+                  ),
+                  Text("Password*")
+                ],
+              ),)
             ],
           ),
         ),
