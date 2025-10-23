@@ -12,19 +12,26 @@ class _loginState extends State<login> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        spacing: 15,
         children: [
-          Image(image: AssetImage("gambar/logo.png"), width: 200, height: 200),
           Container(
-            child: Row(
+            child: Column(
+              spacing: 15,
               children: [
+                Image(
+                  image: AssetImage("gambar/logo.png"),
+                  width: 200,
+                  height: 200,
+                ),
                 Text("LKS",
                 style: TextStyle(
-                  fontSize: 50, fontWeight: FontWeight.bold
-                ),)
+                  fontSize: 50, fontWeight: FontWeight.bold, color: Colors.blueAccent
+                ),
+                ),
+                Text("MART",
+                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold, color: Colors.blueAccent),)
               ],
             ),
-          )
+          ),
         ],
       ),
     );
