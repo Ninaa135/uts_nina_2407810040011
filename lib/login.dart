@@ -11,6 +11,7 @@ class login extends StatefulWidget {
 
 class _loginState extends State<login> {
   bool _showpassword = true;
+  bool _keepLoggedIn = false;
   final TextEditingController _emailcontroller = TextEditingController();
   final TextEditingController _passwordcontroller = TextEditingController();
   @override
@@ -33,7 +34,6 @@ class _loginState extends State<login> {
                 color: Colors.blueAccent,
               ),
             ),
-            SizedBox(height: 20),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -66,7 +66,6 @@ class _loginState extends State<login> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -110,6 +109,23 @@ class _loginState extends State<login> {
                   ),
 
                   Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Checkbox(
+                          value: _keepLoggedIn,
+                          onChanged: (value) {
+                            setState(() {
+                              _keepLoggedIn = value!;
+                            });
+                          },
+                        ),
+                        Text("Keep me logged in"),
+                      ],
+                    ),
+                  ),
+
+                  Padding(
                     padding: const EdgeInsets.all(8),
                     child: Center(
                       child: Column(
@@ -119,19 +135,14 @@ class _loginState extends State<login> {
                             onPressed: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => Menu(),
-                                ),
+                                MaterialPageRoute(builder: (context) => Menu()),
                               );
                             },
                             child: const Text('Login'),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                               foregroundColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 50,
-                                vertical: 15,
-                              ),
+                              minimumSize: const Size(double.infinity, 50),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadiusGeometry.circular(8),
                               ),
