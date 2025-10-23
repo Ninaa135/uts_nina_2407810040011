@@ -26,33 +26,33 @@ class _loginState extends State<login> {
             Text(
               "LKS MART",
               style: TextStyle(
-                fontSize: 50,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.blueAccent,
               ),
             ),
+            SizedBox(height: 20),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 5,
                 children: [
                   Text(
                     "Sign In",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             ),
+            
 
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 5,
                 children: [
                   Text(
                     "Enter your ID and password to sign in!",
@@ -61,6 +61,7 @@ class _loginState extends State<login> {
                 ],
               ),
             ),
+            SizedBox(height: 20),
 
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -100,6 +101,20 @@ class _loginState extends State<login> {
                       )
                     ),
                   ),
+
+                  Padding(padding: const EdgeInsets.all(8),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TextButton(onPressed: () {
+
+                      },
+                      child: const Text('Login'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.blueAccent,
+                      ),)
+                    ],
+                  ),)
                 ],
               ),
             ),
