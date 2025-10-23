@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:uts_nina_2407810040011/daftar.dart';
+import 'package:uts_nina_2407810040011/menu.dart';
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -115,16 +117,24 @@ class _loginState extends State<login> {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              print('login');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Menu(),
+                                ),
+                              );
                             },
                             child: const Text('Login'),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.blueAccent,
                               foregroundColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 50,
+                                vertical: 15,
+                              ),
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusGeometry.circular(8)
-                              )
+                                borderRadius: BorderRadiusGeometry.circular(8),
+                              ),
                             ),
                           ),
                         ],
