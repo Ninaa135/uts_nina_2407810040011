@@ -26,7 +26,7 @@ class _loginState extends State<login> {
             Text(
               "LKS MART",
               style: TextStyle(
-                fontSize: 30,
+                fontSize: 40,
                 fontWeight: FontWeight.bold,
                 color: Colors.blueAccent,
               ),
@@ -41,12 +41,11 @@ class _loginState extends State<login> {
                 children: [
                   Text(
                     "Sign In",
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
             ),
-            
 
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -56,7 +55,11 @@ class _loginState extends State<login> {
                 children: [
                   Text(
                     "Enter your ID and password to sign in!",
-                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.normal, color: Colors.grey),
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.grey,
+                    ),
                   ),
                 ],
               ),
@@ -92,29 +95,42 @@ class _loginState extends State<login> {
                           });
                         },
                         icon: Icon(
-                          _showpassword ? Icons.remove_red_eye : Icons.visibility_off,
+                          _showpassword
+                              ? Icons.remove_red_eye
+                              : Icons.visibility_off,
                         ),
                       ),
                       hintText: "Min. 8 characters",
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(8)
-                      )
+                        borderRadius: BorderRadius.circular(8),
+                      ),
                     ),
                   ),
 
-                  Padding(padding: const EdgeInsets.all(8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      TextButton(onPressed: () {
-
-                      },
-                      child: const Text('Login'),
-                      style: TextButton.styleFrom(
-                        foregroundColor: Colors.blueAccent,
-                      ),)
-                    ],
-                  ),)
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              print('login');
+                            },
+                            child: const Text('Login'),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadiusGeometry.circular(8)
+                              )
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
