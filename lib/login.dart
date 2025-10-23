@@ -152,6 +152,22 @@ class _loginState extends State<login> {
                       ),
                     ),
                   ),
+
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Belum Punya Akun? "),
+                        TextButton(onPressed: () {
+                          Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Daftar()))
+                        },
+                        child: Text("Daftar di sini"))
+                      ],
+                    ),
+                  )
+
                 ],
               ),
             ),

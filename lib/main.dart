@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uts_nina_2407810040011/login.dart';
+import 'package:uts_nina_2407810040011/daftar.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       //   "/halaman2":(context)=>Page2()
       // },
       // initialRoute: "/",
-      home: login(),
+      home: Daftar(),
     );
   }
 }
