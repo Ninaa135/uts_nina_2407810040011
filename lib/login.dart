@@ -17,7 +17,7 @@ class _loginState extends State<login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
@@ -84,7 +84,7 @@ class _loginState extends State<login> {
                       ),
                     ),
                   ),
-                  Text("Password*"),
+                  Text("Password *"),
                   TextField(
                     controller: _passwordcontroller,
                     obscureText: _showpassword,
@@ -159,15 +159,18 @@ class _loginState extends State<login> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text("Belum Punya Akun? "),
-                        TextButton(onPressed: () {
-                          Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Daftar()))
-                        },
-                        child: Text("Daftar di sini"))
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Daftar()),
+                            );
+                          },
+                          child: Text("Daftar di sini"),
+                        ),
                       ],
                     ),
-                  )
-
+                  ),
                 ],
               ),
             ),
